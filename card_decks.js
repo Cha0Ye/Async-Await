@@ -37,7 +37,7 @@ $(async function() {
     $('#get-new-card').on('click', async function(evt){
         evt.preventDefault();
         let card = await $.get(`https://deckofcardsapi.com/api/deck/${deck.deck_id}/draw/?count=1`);
-        $('#cards').append(`<img src="${card.cards[0].images.svg}" alt=""></img>`)
+        $('#cards').append(`<img src="${card.cards[0].images.png}" alt=""></img>`)
         cards.push(`${card.cards[0].value} of ${card.cards[0].suit}`)
         console.log(cards)
     })
